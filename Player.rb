@@ -13,5 +13,5 @@ class Player
   
 end
 
-player1=Player.new('player1')
-puts player1
+# player1=Player.new('player1')
+# puts player1

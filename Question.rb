@@ -4,12 +4,12 @@ class Question
   def initialize
   end
 
-  def ask_question
-    @num1 = rand(19) + 1
-    @num2 = rand(19) + 1
-    " What does #{@num1} plus #{@num2} equal?"
+  def ask_question(current_player)
+    @num1 = rand(20) + 1
+    @num2 = rand(20) + 1
+    "#{current_player}: What does #{@num1} plus #{@num2} equal?\n> "
+    # >"
   end
-
   
 
   def solution
@@ -19,24 +19,9 @@ class Question
   def user_response
     @response = gets.chomp
   end
-
-  def comparison
-    if solution == response.to_i
-      puts "Player: Yes! You are Correct." 
-    else
-      puts "Seriously? NO!"
-    end
+ 
+  def comparison?
+    solution == response.to_i
   end
   
 end
-
-question=Question.new
-
-
-puts question.ask_question
-
-question.user_response
-
-question.comparison
-
-

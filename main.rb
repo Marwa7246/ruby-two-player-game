@@ -2,14 +2,10 @@ require './Player'
 require './Question'
 require './Game'
 
-player1 = Player.new('player1')
+player1 = Player.new('Player 1')
+player2 = Player.new('Player 2')
+
 game = Game.new
 question = Question.new
-# puts game.current_player
 
-
-puts question.ask_question(game.current_player)
-
-question.user_response
-
-question.comparison(game.current_player)
+game.start_game(player1, player2, question)
